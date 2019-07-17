@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML imports</title>
+    <link rel="import" href="notice.html" id="notice" />
+  </head>
+  <body>
+    <script>
+        // Currently not working in firefox and in chrome
+      const $link = document.getElementById("notice");
+      const noticeFrame = $link.import.querySelector(".notice-frame");
+
+      document.body.appendChild(noticeFrame.cloneNode(true));
+    </script>
+  </body>
+</html>
